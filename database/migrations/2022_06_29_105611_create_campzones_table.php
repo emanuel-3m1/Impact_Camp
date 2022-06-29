@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('camp_zones', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nickname');
+        Schema::create('campzones', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('camp_zones');
+        Schema::dropIfExists('campzones');
     }
 };

@@ -19,7 +19,7 @@
         <h1>Select your Camp Zone </h1>
         @if(!empty('campzones'))
             @foreach($campzones as $campzone)
-                <div><a href="{{ route('campzone.show',$campzone->id) }}">Camp Zone {{ $campzone->nickname}}</a></div>
+                <div><a href="{{ route('campzone.show',$campzone->id) }}">Camp Zone {{ $campzone->title}}</a></div>
             @endforeach
         @endif
     </div>

@@ -12,11 +12,12 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('camp_sites', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('campsites_id')->unsigned();
+        Schema::create('campsites', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('campzone_id')->unsigned();
             $table->timestamps();
-            $table->foreign('camp_zones_id')->references('id')->on('camp_zones')->onDelete('cascade');
+            // Foreign Keys
+            $table->foreign('campzone_id')->references('id')->on('campzones')->onDelete('cascade');
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('camp_sites');
+        Schema::dropIfExists('campsites');
     }
 };

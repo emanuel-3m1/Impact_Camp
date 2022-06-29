@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\CampZones;
+use App\Models\CampZone;
 
-class CampZonesSeeder extends Seeder
+class CampZoneSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -17,18 +17,18 @@ class CampZonesSeeder extends Seeder
     {
         $campzones = [
           [
-              'nickname' => 'Papperwood',
+              'title' => 'Papperwood',
           ],
           [
-              'nickname' => 'Redwood',
+              'title' => 'Redwood',
           ],
           [
-              'nickname' => 'Eucalyptus',
+              'title' => 'Eucalyptus',
           ]
         ];
 
         foreach ($campzones as $campzone){
-            CampZones::create(['nickname' => $campzone['nickname']]);
+            CampZone::create(['title' => $campzone['title']]);
         }
     }
 }

@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\CampSites;
+use App\Models\CampSite;
 
-class CampSitesSeeder extends Seeder
+class CampSiteSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -17,18 +17,18 @@ class CampSitesSeeder extends Seeder
     {
         $campsites = [
             [
-                'campsites_id' => '1',
+                'campzone_id' => '1',
             ],
             [
-                'campsites_id' => '2',
+                'campzone_id' => '2',
             ],
             [
-                'campsites_id' => '3',
+                'campzone_id' => '3',
             ]
         ];
 
         foreach ($campsites as $campsite){
-            CampSites::create(['campsites_id' => $campsite['campsites_id']]);
+            CampSite::create(['campzone_id' => $campsite['campzone_id']]);
         }
 
     }
